@@ -21,7 +21,7 @@ const Navbar = () => {
       ];
 
   return (
-    <nav className="relative flex items-center justify-between px-4 md:px-6 py-4 bg-slate-900/70 backdrop-blur border-b border-slate-800 gap-3 flex-nowrap">
+    <nav className="relative z-50 flex items-center justify-between px-4 md:px-6 py-4 bg-slate-900/70 backdrop-blur border-b border-slate-800 gap-3 flex-nowrap">
       <div className="flex items-center gap-3 min-w-0">
         <Link to={user?.role === 'admin' ? '/admin' : '/dashboard'} className="flex items-center gap-3 min-w-0">
           <Logo compact />
@@ -44,7 +44,7 @@ const Navbar = () => {
         )}
       </div>
       {menuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900/95 border-t border-slate-800 shadow-glass z-40">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900/95 border-t border-slate-800 shadow-glass z-50">
           <div className="flex flex-col p-4 space-y-2">
             {links.map((l) => (
               <Link key={l.to} to={l.to} onClick={() => setMenuOpen(false)} className="text-slate-100">
