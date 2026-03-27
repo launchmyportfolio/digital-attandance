@@ -74,6 +74,9 @@ const Login = () => {
             <p className="text-sm text-slate-400">
               New here? <a href="/register" className="text-neon">Register now</a>
             </p>
+            <p className="text-sm text-slate-400">
+              Admin? <a href="/admin/login" className="text-neon">Switch to Admin Login</a>
+            </p>
           </div>
         </form>
       </div>
