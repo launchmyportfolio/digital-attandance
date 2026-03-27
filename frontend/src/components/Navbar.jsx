@@ -21,24 +21,24 @@ const Navbar = () => {
       ];
 
   return (
-    <nav className="flex items-center justify-between px-4 md:px-6 py-4 bg-slate-900/70 backdrop-blur border-b border-slate-800">
-      <div className="flex items-center gap-3">
-        <Link to={user?.role === 'admin' ? '/admin' : '/dashboard'} className="flex items-center gap-3">
+    <nav className="relative flex items-center justify-between px-4 md:px-6 py-4 bg-slate-900/70 backdrop-blur border-b border-slate-800 gap-3 flex-nowrap">
+      <div className="flex items-center gap-3 min-w-0">
+        <Link to={user?.role === 'admin' ? '/admin' : '/dashboard'} className="flex items-center gap-3 min-w-0">
           <Logo compact />
-          <span className="text-lg md:text-xl font-semibold">Junglee Russian Force</span>
+          <span className="text-base md:text-lg font-semibold truncate">Junglee Russian Force</span>
         </Link>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 flex-shrink-0">
         <button
-          className="md:hidden btn-primary px-3 py-2"
+          className="md:hidden btn-primary px-3 py-2 flex-shrink-0"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
         >
           ☰
         </button>
-        {user && <span className="hidden md:inline text-sm text-slate-300">{user.name} ({user.role})</span>}
+        {user && <span className="hidden md:inline text-sm text-slate-300 flex-shrink-0">{user.name} ({user.role})</span>}
         {user && (
-          <button onClick={logout} className="hidden md:inline btn-primary bg-red-500 hover:bg-red-400">
+          <button onClick={logout} className="hidden md:inline btn-primary bg-red-500 hover:bg-red-400 flex-shrink-0">
             Logout
           </button>
         )}
