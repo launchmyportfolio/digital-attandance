@@ -22,9 +22,9 @@ const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <Sidebar role="admin" />
-        <main className="flex-1 p-6 space-y-6">
+        <main className="flex-1 p-4 md:p-6 space-y-6">
           <h2 className="text-3xl font-bold">Admin Dashboard</h2>
           {!stats ? (
             <Loader />

@@ -38,13 +38,13 @@ const EmployeeList = () => {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Toast {...toast} />
       <Navbar />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <Sidebar role="admin" />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-4 md:p-6">
           <div className="table-card">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
               <h3 className="text-2xl font-semibold">Employees</h3>
-              <div className="flex gap-2">
+              <div className="flex gap-2 flex-wrap">
                 <input className="input-field" placeholder="Search by name" value={search} onChange={(e) => setSearch(e.target.value)} />
                 <button className="btn-primary" onClick={load}>Search</button>
               </div>

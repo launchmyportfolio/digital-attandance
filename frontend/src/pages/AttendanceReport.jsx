@@ -53,9 +53,9 @@ const AttendanceReport = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <Sidebar role="admin" />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-4 md:p-6">
           <div className="table-card space-y-4">
             <div className="flex flex-wrap gap-3">
               <input className="input-field" placeholder="Employee ID" value={filters.employeeId} onChange={(e) => setFilters({ ...filters, employeeId: e.target.value })} />

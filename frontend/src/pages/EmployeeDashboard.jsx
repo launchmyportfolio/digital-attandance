@@ -28,9 +28,9 @@ const EmployeeDashboard = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <Sidebar role="employee" />
-        <main className="flex-1 p-6 space-y-6">
+        <main className="flex-1 p-4 md:p-6 space-y-6">
           <div className="grid md:grid-cols-3 gap-4">
             <div className="glass-card p-4 rounded-xl">
               <p className="text-sm text-slate-400">Total Entries</p>

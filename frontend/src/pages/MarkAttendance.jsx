@@ -24,9 +24,9 @@ const MarkAttendance = () => {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Toast {...toast} />
       <Navbar />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <Sidebar role="employee" />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-4 md:p-6">
           <div className="glass-card rounded-xl p-6 max-w-2xl">
             <h3 className="text-2xl font-semibold mb-4">Mark Attendance</h3>
             <form className="space-y-4" onSubmit={submit}>

@@ -31,7 +31,7 @@ const Sidebar = ({ role }) => {
   const items = role === 'admin' ? admin : common;
 
   return (
-    <aside className="w-64 bg-slate-900/70 border-r border-slate-800 min-h-screen p-4 space-y-2">
+    <aside className="hidden md:block w-64 bg-slate-900/70 border-r border-slate-800 min-h-screen p-4 space-y-2">
       {items.map((i) => (
         <Item key={i.to} {...i} />
       ))}
